@@ -10,9 +10,9 @@ from multiprocessing import Pool
 # Site follows this formatting below:
 # https://spotifycharts.com/regional/global/daily/2021-02-11
 
-def get_chart_url(country_code, interval, date):
+def get_chart_url(country_code, interval, date1, date2):
     """Gets a url with the specified parameters"""
-    chart_url = f'https://spotifycharts.com/regional/{country_code}/{interval}/{date}'
+    chart_url = f'https://spotifycharts.com/regional/{country_code}/{interval}/{date1}--{date2}'
     return chart_url
 
 def list_dates(start_date, end_date):
@@ -20,8 +20,12 @@ def list_dates(start_date, end_date):
     end = dt.datetime.strptime(end_date, "%Y-%m-%d").date()
     start = dt.datetime.strptime(start_date, "%Y-%m-%d").date()
     delta = end - start
-    dates = [(start+dt.timedelta(days = i)).strftime('%Y-%m-%d') for i in range(delta.days + 1)]
-    return dates
+    dates = [(start+dt.timedelta(weeks = i)).strftime('%Y-%m-%d') for i in range(delta.days//7)]
+    date_pairs = []
+    for i in range(len(dates)-1):
+        pair = list([dates[i], dates[i+1]])
+        date_pairs.append(pair)
+    return date_pairs
 
 def get_locations():
     """Gets a list of all the country codes to scrape"""
@@ -56,7 +60,7 @@ def scrape_spotify(chart_url, country_name, date):
     # put into a dataframe and include a ranking column for reference
     df = pd.DataFrame({'rank':list(range(1,len(track)+1,1)), 'artist': artist,'track': track,'streams':streams, 'spotify_link': spotify_link})
     df['country_chart'] = country_name
-    df['date'] = date
+    df['week start date'] = date
     return df
 
 def output(df, dir_path, scrape_date):

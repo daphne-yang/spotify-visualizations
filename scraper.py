@@ -5,8 +5,8 @@ from tqdm import tqdm
 from multiprocessing import Pool
 
 ## Scraper Inputs ##
-start_date = '2020-09-27'
-end_date = '2021-02-12'
+start_date = '2020-12-25'
+end_date = '2021-02-20'
 
 ## File Paths ##
 root_path = "scrape_data"
@@ -29,8 +29,8 @@ dates = scrape.list_dates(start_date, end_date)
 df = pd.DataFrame()
 for date in tqdm(dates):
     for i in tqdm(range(len(loc_code))):
-        loc_link = scrape.get_chart_url(loc_code[i], "daily", date)
-        chart_df = scrape.scrape_spotify(loc_link, loc_name[i], date)
+        loc_link = scrape.get_chart_url(loc_code[i], "weekly", date[0],date[1])
+        chart_df = scrape.scrape_spotify(loc_link, loc_name[i], date[0])
         df = pd.concat([df, chart_df])
     if date[:4] == '2020':
         dir_path = dir_2020
