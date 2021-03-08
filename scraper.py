@@ -5,8 +5,8 @@ from tqdm import tqdm
 from multiprocessing import Pool
 
 ## Scraper Inputs ##
-start_date = '2020-12-25'
-end_date = '2021-02-20'
+start_date = '2019-12-27'
+end_date = '2021-01-01'
 
 ## File Paths ##
 root_path = "scrape_data"
