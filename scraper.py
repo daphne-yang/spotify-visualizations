@@ -5,38 +5,34 @@ from tqdm import tqdm
 from multiprocessing import Pool
 
 ## Scraper Inputs ##
-start_date = '2019-12-27'
-end_date = '2021-01-01'
-
+# start_date = '2016-12-30'
+# end_date = '2018-01-05'
+# year = '2017'
+# start_date = '2018-01-05'
+# end_date = '2019-01-04'
+# year = '2018'
+start_date = '2019-01-04'
+end_date = '2020-01-03'
+year = '2019'
 ## File Paths ##
 root_path = "scrape_data"
-dir_2020 = os.path.join(root_path, "2020")
-dir_2021 = os.path.join(root_path, "2021")
 
 # check to see if the scrape_data dir exists -- if not, create one 
 if not os.path.exists(root_path):
     os.makedirs(root_path)
 
-# check to see if the sub directories for the years exsits -- if not, create them 
-if not os.path.exists(dir_2020):
-    os.makedirs(dir_2020)
-if not os.path.exists(dir_2021):
-    os.makedirs(dir_2021)
 
 loc_code, loc_name = scrape.get_locations()
 dates = scrape.list_dates(start_date, end_date)
 
+## all data cumulates
 df = pd.DataFrame()
 for date in tqdm(dates):
     for i in tqdm(range(len(loc_code))):
         loc_link = scrape.get_chart_url(loc_code[i], "weekly", date[0],date[1])
         chart_df = scrape.scrape_spotify(loc_link, loc_name[i], date[0])
         df = pd.concat([df, chart_df])
-    if date[:4] == '2020':
-        dir_path = dir_2020
-    else:
-        dir_path = dir_2021
-    scrape.output(df, dir_path, date)
+scrape.output(df, year)
 
 
 

@@ -63,11 +63,8 @@ def scrape_spotify(chart_url, country_name, date):
     df['week start date'] = date
     return df
 
-def output(df, dir_path, scrape_date):
-    # check if folder name exists
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
-    df.to_csv(f'./{dir_path}/{scrape_date}_all_locations_top200.csv', index = False)
+def output(df, year):
+    df.to_csv(f'./{year}_weekly_all_locations_top200.csv', index = False)
 
 
 # #####################################
