@@ -15,7 +15,7 @@ start_date = '2019-01-04'
 end_date = '2020-01-03'
 year = '2019'
 ## File Paths ##
-root_path = "scrape_data"
+root_path = "raw_scrape_data"
 
 # check to see if the scrape_data dir exists -- if not, create one 
 if not os.path.exists(root_path):

@@ -6,7 +6,7 @@ def clean_data(df, year):
     '''keeps just the table entries from the correct year -- 
     because spotify charts goes by weeks and some years start mid week'''
     df = df[df['week start date'].str[:4] == year]
-    output_name = f'../weekly_top200/{year}_weekly_all_locations_top200.csv'
+    output_name = f'../cleaned_data/{year}_weekly_all_locations_top200.csv'
     df.to_csv(output_name, index = False)
     print(f'{year}_weekly_all_locations_top200.csv saved to file')
 
@@ -24,11 +24,11 @@ def file_select(dir_list):
 
 ## Cleaning scrape_data and output to weekly_top200 folder
 df = pd.DataFrame()
-for idx, file in enumerate(file_select('../scrape_data')):
-    year = file_select('../scrape_data')[idx][:4]
-    path = os.path.join('../scrape_data', file)
+for idx, file in enumerate(file_select('../raw_scrape_data')):
+    year = file_select('../raw_scrape_data')[idx][:4]
+    path = os.path.join('../raw_scrape_data', file)
     dt = pd.read_csv(path)
     df = pd.concat([df, dt])
-for idx, file in enumerate(file_select('../scrape_data')):
-    year = file_select('../scrape_data')[idx][:4]
+for idx, file in enumerate(file_select('../raw_scrape_data')):
+    year = file_select('../raw_scrape_data')[idx][:4]
     clean_data(df, year)
