@@ -61,7 +61,7 @@ from lyrics_function import get_song_lyrics
 #       Putting It All Together      #
 #====================================#
 
-# getting all of the weekly data into one big data frame -- df
+# getting all of the weekly data into one big data frame
 df = pd.DataFrame()
 files = os.listdir('cleaned_data')
 for idx, file in enumerate(files):
