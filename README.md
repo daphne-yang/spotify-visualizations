@@ -32,7 +32,7 @@
 <p> Our Data was combined from a variety of sources including: </p>
 <ul>
   <li>Top 200 Charted Songs Globally and across 70 countries was scraped from <a href="https://spotifycharts.com/regional">Spotifycharts.com</a>(Code located in the resources folder)</li>
-  <li>Corresponding song lyrics from the top 200 global songs were obtained using the <a href ="https://docs.genius.com/">Genius API</a> (Code located in the resources folder)</li>
+  <li>Corresponding song lyrics from all the top 200 global songs were obtained using the <a href ="https://docs.genius.com/">Genius API</a> (Code located in the resources folder); lyric data missing from 154/3424 top songs</li>
   <li>Dataset of musicality obtained from Kaggle (Data stored in Spotify folder)</li>
   <li>Playlist Dataset obtained from Spotify R&D through the <a href="https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge">Million Playlist Challenge</a> hosted by AI Crowd</li>
 </ul>
