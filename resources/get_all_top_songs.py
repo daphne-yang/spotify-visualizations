@@ -56,6 +56,7 @@ def format_artist(df, col='artist', new_col_name = "genius_artist"):
 
 # import from lyrics_functions file
 from lyrics_function import get_song_lyrics
+from lyrics_function import get_genres, get_missing_genres
 
 #====================================#
 #       Putting It All Together      #
@@ -89,3 +90,25 @@ for song_data in tqdm(song_data_lists):
     lyrics.append(song_lyric)
 top_tracks_artists['lyrics'] = lyrics
 top_tracks_artists.to_csv('cleaned_data/all_top_songs_with_lyrics.csv', index=False)
+
+import pandas as pd
+df = pd.read_csv('/Users/daphneyang/Desktop/5YMIDS_SP21/w209/spotify-visualizations/cleaned_data/all_top_songs_with_lyrics.csv')
+track = df['genius_track'].to_list()
+artist = df['genius_artist'].to_list()
+zipped = [list(a) for a in zip(track, artist)]
+genres = []
+for song in tqdm(zipped):
+  print("getting genre for", song[0], " by ", song[1])
+  genre = get_genres(song[0], song[1])
+  if genre == "missing genre":
+    genre = get_missing_genres(song[0], song[1])
+  genres.append(genre)
+## split the lists
+split_genres = [str(i[0]).replace('tag:',"").split(",") for i in genres]
+
+df_ =df.copy()
+## add to dataframe and clean the values
+df_['genre'] = split_genres
+df_['genre'] = df_.genre.astype(str).str.replace('[','')
+df_['genre'] = df_.genre.astype(str).str.replace(']','')
+df_['genre'] = df_.genre.astype(str).str.replace("'",'')
