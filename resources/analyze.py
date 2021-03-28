@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar  4 07:24:10 2021
-
-@author: tgoet
-"""
-
 import yake
 import time
 import pandas as pd
