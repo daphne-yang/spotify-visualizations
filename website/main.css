@@ -1,10 +1,10 @@
-.tableauPlaceholder {
-    width: 500px;
-    height: auto;
+.tableauPlaceholder{
+    width:500px;
+    height:auto;
 }
 
-.explanation {
-    font-family: "Times New Roman", Times, serif;
+.explanation{
+    font-family: 'Times New Roman', Times, serif;
     font-size: large;
 }
 /*
@@ -32,6 +32,7 @@
     color: #fff;
 }
 
+
 /* Change navbar styling on scroll */
 .navbar.active {
     background: #64b85d;
@@ -52,55 +53,20 @@
     color: #555;
 }
 
+
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
     .navbar {
         background: #fff;
     }
 
-    .navbar .navbar-brand,
-    .navbar .nav-link {
+    .navbar .navbar-brand, .navbar .nav-link {
         color: #555;
     }
 }
 
-.background-video {
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-@media (min-aspect-ratio: 16/9) {
-    .background-video {
-        width: 100%;
-        height: auto;
-    }
-}
-@media (max-aspect-ratio: 16/9) {
-    .background-video {
-        width: auto;
-        height: 100%;
-    }
-}
 
-.adventurer {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 33%;
-    height: 25%;
-}
 
-.intro {
-    margin-left: auto;
-    margin-right: auto;
-    width: 33%;
-}
-.background-light {
-    background-color: #e7e1dd;
-    color: #1d1d1d;
-}
 /*
 *
 * ==========================================
@@ -112,18 +78,16 @@
     font-size: 0.9rem !important;
 }
 
+
 body {
     min-height: 110vh;
-    background-color: #1d1d1d;
+    background-color: #000000;
     /* background-image: linear-gradient(135deg, #000000 0%, #c4e0e5 100%); */
 }
 
-.display-4 {
+.display-4{
     color: #64b85d;
 }
-<<<<<<< HEAD
 
 /* about the team */
 
-=======
->>>>>>> 053f7835ee65ccc7a9d1ef023d3d35f2ee507e9d
