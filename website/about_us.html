@@ -1,161 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <link rel="stylesheet" href='./main.css' />
-        <script src='jquery-3.6.0.min.js'></script>
+        <meta charset="UTF-8" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./main.css" />
+        <script src="jquery-3.6.0.min.js"></script>
         <title>About the Team</title>
+        <link rel="shortcut icon" type="png" href="img/favicon_logo.png" />
     </head>
 
     <body>
-            <!DOCTYPE html>
-            <html>
+        <!DOCTYPE html>
+        <html>
             <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-            html {
-              box-sizing: border-box;
-            }
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <style>
+                    html {
+                        box-sizing: border-box;
+                    }
 
-            
-            *, *:before, *:after {
-              box-sizing: inherit;
-            }
-            
-            .column {
-              float: left;
-              width: 33.3%;
-              margin-bottom: 16px;
-              padding: 0 8px;
-            }
-            
-            @media screen and (max-width: 650px) {
-              .column {
-                width: 100%;
-                display: block;
-              }
-            }
-            
-            .card {
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            }
-            
-            .container {
-              padding: 0 16px;
-            }
-            
-            .container::after, .row::after {
-              content: "";
-              clear: both;
-              display: table;
-            }
-            
-            .title {
-              color: grey;
-            }
-            
-            .button {
-              border: none;
-              outline: 0;
-              display: inline-block;
-              padding: 8px;
-              color: white;
-              background-color: #000;
-              text-align: center;
-              cursor: pointer;
-              width: 100%;
-            }
-            
-            .button:hover {
-              background-color: #555;
-            }
-            </style>
+                    *,
+                    *:before,
+                    *:after {
+                        box-sizing: inherit;
+                    }
+
+                    .column {
+                        float: left;
+                        width: 33.3%;
+                        margin-bottom: 16px;
+                        padding: 0 8px;
+                    }
+
+                    @media screen and (max-width: 650px) {
+                        .column {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+
+                    .card {
+                        /* box-shadow: 0 4px 8px 0 #b1b2b3; */
+                        background-color: #1d1d1d;
+                        color: white;
+                        font-size: 1.25rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    .container {
+                        padding: 0 16px;
+                    }
+
+                    .container::after,
+                    .row::after {
+                        content: "";
+                        clear: both;
+                        display: table;
+                    }
+
+                    .title {
+                        color: grey;
+                    }
+
+                    .button {
+                        border: none;
+                        outline: 0;
+                        display: inline-block;
+                        padding: 8px;
+                        color: white;
+                        background-color: #000;
+                        text-align: center;
+                        cursor: pointer;
+                        width: 100%;
+                    }
+
+                    .button:hover {
+                        background-color: #555;
+                    }
+                </style>
             </head>
-            <body>
 
-            <!-- Navbar-->
-        <header class="header">
-                <nav class="navbar navbar-expand-lg fixed-top py-3">
-                    <div class="container"><a href="./index.html" class="navbar-brand text-uppercase font-weight-bold">Exploring Music through Visualisations</a>
-                        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-                        
-                        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href="./index.html" class="nav-link text-uppercase font-weight-bold">Visualisations <span class="sr-only">(current)</span></a></li>
-                                <li class="nav-item"><a href="./about_us.html" class="nav-link text-uppercase font-weight-bold">About Our Team</a></li>
-                                <!-- <li class="nav-item"><a href="./methodologies.html" class="nav-link text-uppercase font-weight-bold">Databases</a></li> -->
-                            </ul>
+            <body>
+                <!-- Navbar-->
+                <header class="header">
+                    <nav class="navbar navbar-expand-lg fixed-top py-3">
+                        <div class="container">
+                            <a
+                                href="./index.html"
+                                class="navbar-brand text-uppercase font-weight-bold"
+                                >Exploring Music through Visualisations</a
+                            >
+                            <button
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                                class="navbar-toggler navbar-toggler-right"
+                            >
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+                            <div
+                                id="navbarSupportedContent"
+                                class="collapse navbar-collapse"
+                            >
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a
+                                            href="./index.html"
+                                            class="nav-link text-uppercase font-weight-bold"
+                                            >Visualisations
+                                            <span class="sr-only"
+                                                >(current)</span
+                                            ></a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            href="./about_us.html"
+                                            class="nav-link text-uppercase font-weight-bold"
+                                            >About Our Team</a
+                                        >
+                                    </li>
+                                    <!-- <li class="nav-item"><a href="./methodologies.html" class="nav-link text-uppercase font-weight-bold">Databases</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <div class="container">
+                    <div class="pt-5 pb-5 mb-5 text-white">
+                        <h1 class="mt-5 pt-5 pb-3 display-3 center">
+                            Meet Our Team
+                        </h1>
+                        <h2
+                            class="center"
+                            style="font-size: 1.5rem; color: white; width: 50%"
+                        >
+                            Thank you for visiting our website! Feel free to
+                            reach out to any of our team members through their
+                            emails listed below.
+                        </h2>
+                        <div class="container center">
+                            <img
+                                style="
+                                    width: auto;
+                                    height: 100px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                "
+                                src="img/adventurer_walking.gif"
+                                alt="scout walking"
+                            />
                         </div>
                     </div>
-                </nav>
-            </header>
+                </div>
 
-            <br>
-            <br>
-            <br>
-            
-            <div class="row">
-              <div class="column">
-                <div class="card">
-                  <img src="https://ca.slack-edge.com/T0WA5NWKG-U012HFBP9PC-213c4b0329f5-512" alt="Frank Bruni" style="width:100%">
-                  <div class="container">
-                    <h2>Frank Bruni</h2>
-                    <!-- <p class="title">CEO & Founder</p> -->
-                    <p>frankbruni@ischool.berkeley.edu.</p>
-                    <!-- <p>example@example.com</p> -->
-                    <!-- <p><button class="button">Contact</button></p> -->
-                  </div>
-                </div>
-              </div>
-            
-              <div class="column">
-                <div class="card">
-                  <img src="https://ca.slack-edge.com/T0WA5NWKG-U012F495TV1-28d089035e9e-512" alt="Julie Lai" style="width:100%">
-                  <div class="container">
-                    <h2>Julie Lai</h2>
-                    <!-- <p class="title">Art Director</p> -->
-                    <p>julielai@ischool.berkeley.edu</p>
-                    <!-- <p>example@example.com</p> -->
-                    <!-- <p><button class="button">Contact</button></p> -->
-                  </div>
-                </div>
-              </div>
-              
-              <div class="column">
-                <div class="card">
-                  <img src="https://ca.slack-edge.com/T0WA5NWKG-UU6P51H0D-281b5052f13d-512" alt="Daphne Yang" style="width:100%">
-                  <div class="container">
-                    <h2>Daphne Yang</h2>
-                    <!-- <p class="title">Designer</p> -->
-                    <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                    <p>daphne.yang@ischool.berkeley.edu</p>
-                    <!-- <p><button class="button">Contact</button></p> -->
-                  </div>
-                </div>
-              </div>
+                <hr color="white" style="height: 5px" />
+                <br />
+                <br />
 
-              <div class="column">
-                    <div class="card">
-                      <img src="https://ca.slack-edge.com/T0WA5NWKG-U019JNM8YEQ-f5df27c87c07-512" alt="Arda Sozer" style="width:100%">
-                      <div class="container">
-                        <h2>Arda Sozer</h2>
-                        <!-- <p class="title">Designer</p> -->
-                        <p>asozer@ischool.berkeley.edu</p>
-                        <!-- <p>example@example.com</p> -->
-                        <!-- <p><button class="button">Contact</button></p> -->
-                      </div>
+                <div class="container-fluid">
+                    <div
+                        class="row center justify-content-center"
+                        style="display: flex"
+                    >
+                        <div class="column">
+                            <div class="card center">
+                                <img
+                                    src="https://ca.slack-edge.com/T0WA5NWKG-U012HFBP9PC-213c4b0329f5-512"
+                                    alt="Frank Bruni"
+                                    style="width: 100%"
+                                    class="profile"
+                                />
+                                <div class="container">
+                                    <h2 class="display-4 center">
+                                        Frank Bruni
+                                    </h2>
+                                    <!-- <p class="title">CEO & Founder</p> -->
+                                    <a
+                                        class="center"
+                                        style="width: fit-content; color: white"
+                                        href="mailto:frankbruni@ischool.berkeley.edu"
+                                    >
+                                        frankbruni@ischool.berkeley.edu
+                                    </a>
+                                    <!-- <p>example@example.com</p> -->
+                                    <!-- <p><button class="button">Contact</button></p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card center">
+                                <img
+                                    src="https://ca.slack-edge.com/T0WA5NWKG-U012F495TV1-28d089035e9e-512"
+                                    alt="Julie Lai"
+                                    style="width: 100%"
+                                    class="profile"
+                                />
+                                <div class="container">
+                                    <h2 class="display-4">Julie Lai</h2>
+                                    <!-- <p class="title">Art Director</p> -->
+                                    <a
+                                        href="mailto:julielai@ischool.berkeley.edu"
+                                        style="color: white"
+                                        >julielai@ischool.berkeley.edu</a
+                                    >
+                                    <!-- <p>example@example.com</p> -->
+                                    <!-- <p><button class="button">Contact</button></p> -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-            </div>
-            
+                </div>
+                <div class="container-fluid">
+                    <div
+                        class="row center justify-content-center"
+                        style="display: flex"
+                    >
+                        <div class="column">
+                            <div class="card center">
+                                <img
+                                    src="https://ca.slack-edge.com/T0WA5NWKG-U019JNM8YEQ-f5df27c87c07-512"
+                                    alt="Arda Sozer"
+                                    style="width: 100%"
+                                    class="profile"
+                                />
+                                <div class="container">
+                                    <h2 class="display-4 center">Arda Sozer</h2>
+                                    <!-- <p class="title">Designer</p> -->
+                                    <a
+                                        href="mailto:asozer@ischool.berkeley.edu"
+                                        style="color: white"
+                                        >asozer@ischool.berkeley.edu</a
+                                    >
+                                    <!-- <p>example@example.com</p> -->
+                                    <!-- <p><button class="button">Contact</button></p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card center">
+                                <img
+                                    src="https://ca.slack-edge.com/T0WA5NWKG-UU6P51H0D-281b5052f13d-512"
+                                    alt="Daphne Yang"
+                                    style="width: 100%"
+                                    class="profile"
+                                />
+                                <div class="container">
+                                    <h2
+                                        class="display-4 center"
+                                        style="width: fit-content"
+                                    >
+                                        Daphne Yang
+                                    </h2>
+                                    <!-- <p class="title">Designer</p> -->
+                                    <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+                                    <a
+                                        href="mailto:daphne.yang@berkeley.edu"
+                                        style="color: white"
+                                        >daphne.yang@berkeley.edu</a
+                                    >
+                                    <!-- <p><button class="button">Contact</button></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </body>
-            </html>
+        </html>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"
+        ></script>
         <script src="./main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
