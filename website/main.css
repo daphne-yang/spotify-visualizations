@@ -99,7 +99,7 @@ body {
 }
 
 .vis-header {
-    display: inline-block;
+    display: inline;
 }
 
 .guide-icons {
