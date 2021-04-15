@@ -2,7 +2,7 @@
 
 <h2>Group: Daphne Yang, Julie Lai, Frank Bruni, Arda Sozer</h2>
 
-### Description (Work in Progress)
+### Description
 
 <hr>
 
@@ -23,7 +23,7 @@
 <p> We will be implementing 4 main visualization idioms to help our users follow along in our data exploration and come to their own conclusions about our hypotheses</p>
 <ol>
   <li> Racing Bar Charts - See how songs from 2017-2020 rotate through Spotify's top 200 charts </li>
-  <li> Network Graph - See how song lyrics relate across decades in topics </li>
+  <li> Musical Feature Maps - See what kinds of musical features are in parts of time and what the definitions of musical features are </li>
   <li> Map of Top Songs - See how top song popularity spreads globally </li>
   <li> Bar Charts/Line Graphs of Musicality - See how songs change through the years </li>
 </ol>
@@ -34,5 +34,5 @@
   <li>Top 200 Charted Songs Globally and across 70 countries was scraped from <a href="https://spotifycharts.com/regional">Spotifycharts.com</a>(Code located in the resources folder)</li>
   <li>Corresponding song lyrics from all the top 200 global songs were obtained using the <a href ="https://docs.genius.com/">Genius API</a> (Code located in the resources folder); lyric data missing from 154/3424 top songs</li>
   <li>Dataset of musicality obtained from Kaggle (Data stored in Spotify folder)</li>
-  <li>Playlist Dataset obtained from Spotify R&D through the <a href="https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge">Million Playlist Challenge</a> hosted by AI Crowd</li>
+  <li>Dataset of spotify music from Kaggle (Data stored in Spotify folder)</li>
 </ul>
